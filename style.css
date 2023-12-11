@@ -1,0 +1,110 @@
+:root{
+    --maineBg:blue;
+    --maineColor:white;
+}
+
+
+p{
+    font-size: 20px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#text{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 50px;
+    font-family: Impact;
+    margin: 20px;
+    position: relative;
+    animation-name: anemet1;
+    animation-duration: 3s;
+}
+
+@keyframes anemet1{
+    0%{
+        transform: translateX(200%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+h1::after{
+    content: "";
+    width: 65%;
+    height: 5px;
+    background-color: var(--maineBg);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.parg1{
+    margin: 20px;
+    font-size: 25px;
+    font-family: "Times New Roman";
+
+    animation-name: anemet2;
+    animation-duration: 3s;
+
+}
+
+
+@keyframes anemet2{
+    0%{
+        transform: translateX(-200%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+header button{
+    border: 1px solid var(--maineBg);
+    color: blue;
+    border-radius: 20px   0px  10px ;
+    outline: none;
+    padding: 20px 50px;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+header button:hover{
+    background-color: var(--maineBg);
+    color: var(--maineColor);
+}
+
+
+
+@media screen  and ( max-width :800px){
+    h1{
+        font-size: 30px;
+    }
+    .parg1{
+        font-size: 20px;
+        text-align: center;
+    }
+}
